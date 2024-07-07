@@ -1,0 +1,47 @@
+* {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+
+#draggable,
+#draggable2,
+#draggable3,
+#draggable4,
+#draggable5,
+#draggable6,
+#draggable7 {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(30, 255, 0, 0.3);
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.table {
+    width: 96vw;
+    height: 80vh;
+    border: solid blue 1px;
+    margin: 2rem;
+    background-image: url("../img/tabela-branco.jpg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center;
+}
+
+.elementos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1px;
+    align-items: center;
+    border: solid red 1px;
+    font-family: "Alkatra", system-ui;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    cursor: pointer;
+}
