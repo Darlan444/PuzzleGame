@@ -2,6 +2,7 @@
     width: 100vw;
     height: auto;
     margin: 0;
+    background-color: #cfcfcf;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
@@ -124,8 +125,7 @@
 #draggable115,
 #draggable116,
 #draggable117,
-#draggable118
- {
+#draggable118 {
     width: 3rem;
     height: 3rem;
     background: rgba(30, 255, 0, 0.3);
@@ -152,10 +152,15 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1px;
+    margin-top: 1rem;
     align-items: center;
     font-family: "Alkatra", system-ui;
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
     cursor: pointer;
+    border-radius: 23px;
+    background: #a8a8a8;
+    box-shadow: 35px 35px 70px #a5a5a5,
+        -35px -35px 70px #bebebe;
 }
