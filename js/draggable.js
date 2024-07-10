@@ -4,7 +4,6 @@ $( "#droppable" ).droppable({
       $( this )
         .addClass( "ui-state-highlight" )
         .find( "div" )
-          .html( "Dropped!" );
     }
   });
 $("#draggable2").draggable();
