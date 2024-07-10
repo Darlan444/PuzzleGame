@@ -164,3 +164,44 @@
     box-shadow: 35px 35px 70px #a5a5a5,
         -35px -35px 70px #bebebe;
 }
+
+.tabela{
+    display: grid;
+    place-items: center;
+    width: 80vw;
+    height: 80vh;
+    border: solid 1px red;
+}
+.areatable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px red;
+    width: 50% !important;
+}
+
+.l1{
+    display: flex;
+    justify-content: space-between;
+}
+.l2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.linha2-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.quadrado{
+    width: 3rem;
+    height: 3rem;
+    border: solid 1px #000000;
+}
