@@ -1,4 +1,12 @@
 $("#draggable").draggable();
+$( "#droppable" ).droppable({
+    drop: function( event, ui ) {
+      $( this )
+        .addClass( "ui-state-highlight" )
+        .find( "div" )
+          .html( "Dropped!" );
+    }
+  });
 $("#draggable2").draggable();
 $("#draggable3").draggable();
 $("#draggable4").draggable();
