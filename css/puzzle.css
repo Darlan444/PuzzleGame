@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 2rem); /* 18 colunas para os grupos */
+    grid-template-rows: repeat(9, 2rem); /* 9 linhas para os períodos */
+    gap: 1px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.placeholder {
+    background-color: #f0f0f0;
+}
