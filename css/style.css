@@ -1,6 +1,4 @@
 * {
-    width: 100vw;
-    height: auto;
     margin: 0;
     background-color: #cfcfcf;
 }
@@ -165,25 +163,28 @@
         -35px -35px 70px #bebebe;
 }
 
-.tabela{
-    display: grid;
-    place-items: center;
-    width: 80vw;
-    height: 80vh;
-    border: solid 1px red;
-}
-.areatable{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: solid 1px red;
-    width: 50% !important;
-}
 
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.areatabela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: 4rem;
+    border: solid 1px red;
+}
 .l1{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 .l2{
     display: flex;
