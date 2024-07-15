@@ -177,32 +177,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
-    height: 4rem;
+    flex-direction: column;
+    width: 65.3%;
+    height: auto;
     border: solid 1px red;
+    gap: 1px;
 }
 .l1{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    width: 100%;
 }
-.l2{
+.l2 , .l3{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
-.linha2{
+.linha2, .linha3{
     display: flex;
     flex-direction: row;
     justify-content: start;
 }
-.linha2-2{
+.linha2-2 , .linha3-2{
     display: flex;
     flex-direction: row;
     justify-content: end;
 }
+.l4, .l5, .l6, .l7{
+    display: flex;
+    flex-direction: row;
+}
+.l8{
+    margin-top: 2rem;
+}
+.l8, .l9{
+    display: flex;
+    flex-direction: row;
+}
 .quadrado{
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border: solid 1px #000000;
 }
