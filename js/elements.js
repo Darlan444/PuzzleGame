@@ -81,5 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
         area.appendChild(elementDiv);
     });
 
+    for (var i = area.children.length; i >= 0; i--) {
+        area.appendChild(area.children[Math.random() * i | 0]);
+    }
+
 })
 
