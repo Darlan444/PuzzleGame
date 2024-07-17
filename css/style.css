@@ -241,6 +241,9 @@
     width: 3.5rem;
     height: 3.5rem;
     border: solid 1px #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .area-elements {

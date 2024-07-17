@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const area = document.querySelector('.area-elements');
+    const areaT = document.querySelector('.areatabela');
 
     elements.forEach(element =>{
         const { number, symbol } = element;
@@ -84,6 +85,65 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = area.children.length; i >= 0; i--) {
         area.appendChild(area.children[Math.random() * i | 0]);
     }
+
+    const elementsArray = Array.from(area.querySelectorAll('.element'));
+
+    const placeholdersArray = Array.from(areaT.querySelectorAll('.quadrado'));
+
+    const placeholders = Array.from(area.querySelectorAll('.quadrado'), () => {
+        div.classList.add('element', 'placeholder');
+        div.setAttribute('draggable', 'false');
+    });
+
+
+    placeholders.forEach(placeholder => area.appendChild(placeholder));
+
+    elementsArray.forEach(element => {
+        element.addEventListener('dragstart', dragStart);
+        element.addEventListener('dragend', dragEnd);
+    });
+
+    placeholdersArray.forEach(placeholder => {
+        placeholder.addEventListener('dragover', dragOver);
+        placeholder.addEventListener('dragenter', dragEnter);
+        placeholder.addEventListener('dragleave', dragLeave);
+        placeholder.addEventListener('drop', dragDrop);
+    });
+
+    let draggedElement = null;
+
+    function dragStart() {
+        draggedElement = this;
+        this.classList.add('dragging');
+    }
+
+    function dragEnd() {
+        draggedElement.classList.remove('dragging');
+        draggedElement = null;
+    }
+
+    function dragOver(e) {
+        e.preventDefault();
+    }
+
+    function dragEnter(e) {
+        e.preventDefault();
+        this.classList.add('hovered');
+    }
+
+    function dragLeave() {
+        this.classList.remove('hovered');
+    }
+
+    function dragDrop() {
+        this.classList.remove('hovered');
+        if (this.children.length === 0) {
+            this.appendChild(draggedElement);
+        }
+    }
+
+
+    console.log(placeholdersArray);
 
 })
 
