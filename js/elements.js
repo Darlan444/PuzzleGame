@@ -90,6 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const placeholdersArray = Array.from(areaT.querySelectorAll('.quadrado'));
 
+    placeholdersArray.forEach((placeholder, index) => {
+        placeholder.dataset.number = index + 1;
+    });
+
     const placeholders = Array.from(area.querySelectorAll('.quadrado'), () => {
         div.classList.add('element', 'placeholder');
         div.setAttribute('draggable', 'false');
@@ -141,6 +145,19 @@ document.addEventListener('DOMContentLoaded', function() {
             this.appendChild(draggedElement);
         }
     }
+
+    function dragDrop() {
+        this.classList.remove('hovered');
+        if (this.children.length === 0) {
+            this.appendChild(draggedElement);
+            if (this.dataset.number === draggedElement.dataset.number) {
+                this.classList.add('correct');
+            } else {
+                this.classList.add('incorrect');
+            }
+        }
+    }
+
 
 })
 

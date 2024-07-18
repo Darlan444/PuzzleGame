@@ -186,8 +186,14 @@
     flex-direction: column;
     width: 65.3%;
     height: auto;
-    border: solid 1px red;
     gap: 1px;
+}
+
+.correct{
+    background-color: rgb(0, 255, 0);
+}
+.incorrect{
+    background-color: rgb(255, 0, 0);
 }
 
 .l1 {
