@@ -158,6 +158,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function dragDrop() {
+        this.classList.remove('hovered');
+        if (this.children.length === 0) {
+            this.appendChild(draggedElement);
+            if (this.dataset.number == draggedElement.dataset.number) {
+                this.classList.add('correct');
+                this.classList.remove('incorrect');
+            } else {
+                this.classList.add('incorrect');
+                this.classList.remove('correct');
+            }
+        }
+    }
 
 })
 
