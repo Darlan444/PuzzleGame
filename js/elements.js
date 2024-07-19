@@ -174,27 +174,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const dropButton = document.getElementById('dropButton');
-    
-    dropButton.addEventListener('click', function() {
-        let allCorrect = true;
-        placeholdersArray.forEach((placeholder, index) => {
-            const elementNumber = placeholder.dataset.number;
-            const expectedNumber = elements[index].number;
-            if (elementNumber != expectedNumber) {
-                allCorrect = false;
-                placeholder.classList.add('incorrect');
-            } else {
-                placeholder.classList.remove('incorrect');
-            }
-        });
-
-        if (allCorrect) {
-            alert('Parabéns! Você montou corretamente a tabela periódica.');
-        } else {
-            alert('Ops! Alguns elementos não estão na posição correta.');
-        }
-    });
-
 })
 
