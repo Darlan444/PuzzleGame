@@ -82,16 +82,35 @@ document.addEventListener('DOMContentLoaded', function() {
         area.appendChild(elementDiv);
     });
 
-    for (var i = area.children.length; i >= 0; i--) {
-        area.appendChild(area.children[Math.random() * i | 0]);
+    function shuffleElements() {
+        for (let i = area.children.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            area.appendChild(area.children[j]);
+        }
     }
+    shuffleElements();
 
     const elementsArray = Array.from(area.querySelectorAll('.element'));
 
     const placeholdersArray = Array.from(areaT.querySelectorAll('.quadrado'));
 
+    const placeholdersMapping = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+        31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+        41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+        51, 52, 53, 54, 55, 56, 57, 72, 73, 74,
+        75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+        85, 86, 87, 88, 89, 104, 105, 106, 107, 108,
+        109, 110, 111, 112, 113, 114, 115, 116, 117, 118,
+        58, 59, 60, 61, 62, 63, 64, 65, 66, 67,
+        68, 69, 70, 71, 90, 91, 92, 93, 94, 95,
+        96, 97, 98, 99, 100, 101, 102, 103
+    ];
+
     placeholdersArray.forEach((placeholder, index) => {
-        placeholder.dataset.number = index + 1;
+        placeholder.dataset.number = placeholdersMapping[index];
     });
 
     const placeholders = Array.from(area.querySelectorAll('.quadrado'), () => {
@@ -139,24 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.remove('hovered');
     }
 
-    function dragDrop() {
-        this.classList.remove('hovered');
-        if (this.children.length === 0) {
-            this.appendChild(draggedElement);
-        }
-    }
-
-    function dragDrop() {
-        this.classList.remove('hovered');
-        if (this.children.length === 0) {
-            this.appendChild(draggedElement);
-            if (this.dataset.number === draggedElement.dataset.number) {
-                this.classList.add('correct');
-            } else {
-                this.classList.add('incorrect');
-            }
-        }
-    }
+  
 
     function dragDrop() {
         this.classList.remove('hovered');
@@ -171,6 +173,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
+    const dropButton = document.getElementById('dropButton');
+    
+    dropButton.addEventListener('click', function() {
+        let allCorrect = true;
+        placeholdersArray.forEach((placeholder, index) => {
+            const elementNumber = placeholder.dataset.number;
+            const expectedNumber = elements[index].number;
+            if (elementNumber != expectedNumber) {
+                allCorrect = false;
+                placeholder.classList.add('incorrect');
+            } else {
+                placeholder.classList.remove('incorrect');
+            }
+        });
+
+        if (allCorrect) {
+            alert('Parabéns! Você montou corretamente a tabela periódica.');
+        } else {
+            alert('Ops! Alguns elementos não estão na posição correta.');
+        }
+    });
 
 })
 
