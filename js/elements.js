@@ -156,6 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function dragLeave() {
         this.classList.remove('hovered');
+        this.classList.remove('incorrect');
+        this.classList.remove('correct');
     }
 
   
