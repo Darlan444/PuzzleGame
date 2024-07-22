@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const elements = [
         { number: 1, symbol: "H" }, { number: 2, symbol: "He" },
         { number: 3, symbol: "Li" }, { number: 4, symbol: "Be" },
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const area = document.querySelector('.area-elements');
     const areaT = document.querySelector('.areatabela');
 
-    elements.forEach(element =>{
+    elements.forEach(element => {
         const { number, symbol } = element;
 
         const elementDiv = document.createElement('div');
@@ -116,8 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const placeholders = Array.from(area.querySelectorAll('.quadrado'), () => {
         div.classList.add('element', 'placeholder');
         div.setAttribute('draggable', 'false');
-    });
 
+    });
+    
 
     placeholders.forEach(placeholder => area.appendChild(placeholder));
 
@@ -156,11 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function dragLeave() {
         this.classList.remove('hovered');
-        this.classList.remove('incorrect');
-        this.classList.remove('correct');
-    }
 
-  
+    }
 
     function dragDrop() {
         this.classList.remove('hovered');
