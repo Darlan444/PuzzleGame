@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("GG")
         }
     }
+    endGame();
 
 })
 
