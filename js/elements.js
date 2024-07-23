@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         div.setAttribute('draggable', 'false');
 
     });
-    
+
 
     placeholders.forEach(placeholder => area.appendChild(placeholder));
 
@@ -171,6 +171,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.classList.add('incorrect');
                 this.classList.remove('correct');
             }
+        }
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length > 0) {
+                var qtdCorrect = document.getElementsByClassName('correct');
+                var quantidade = qtdCorrect.length;
+
+                console.log('Quantidade de elementos com a classe: ' + quantidade);
+            }
+        });
+    });
+    // Configurações do observador - observar adições de nós ao DOM
+    var config = { childList: true, subtree: true };
+    // Iniciar a observação
+    observer.observe(document.body, config);
+
+    function endGame(){
+        if (quantidade === 118) {
+            console.log("GG")
         }
     }
 
