@@ -179,8 +179,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (mutation.addedNodes.length > 0) {
                 var qtdCorrect = document.getElementsByClassName('correct');
                 var quantidade = qtdCorrect.length;
-
-                console.log('Quantidade de elementos com a classe: ' + quantidade);
+                if (quantidade === 118) {
+                    console.log("GG");
+                }
             }
         });
     });
@@ -189,12 +190,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Iniciar a observação
     observer.observe(document.body, config);
 
-    function endGame(){
-        if (quantidade === 118) {
-            console.log("GG")
-        }
-    }
-    endGame();
 
 })
 
