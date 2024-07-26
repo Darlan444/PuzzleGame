@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (mutation.addedNodes.length > 0) {
                 var qtdCorrect = document.getElementsByClassName('correct');
                 var quantidade = qtdCorrect.length;                
-                if (quantidade === 2) {
+                if (quantidade === 118) {
                     const box = document.querySelector('.endgame');
                     box.style.display="flex";
                     console.log(box);
@@ -197,7 +197,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var config = { childList: true, subtree: true };
     // Start observation
     observer.observe(document.body, config);
-
-
 })
+
+function reload(){
+    window.location.reload();
+}
 
