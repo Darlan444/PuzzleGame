@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // elements declaration
     const elements = [
         { number: 1, symbol: "H" }, { number: 2, symbol: "He" },
         { number: 3, symbol: "Li" }, { number: 4, symbol: "Be" },
@@ -64,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const area = document.querySelector('.area-elements');
     const areaT = document.querySelector('.areatabela');
 
+
+    //elements DOM create
     elements.forEach(element => {
         const { number, symbol } = element;
 
@@ -82,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         area.appendChild(elementDiv);
     });
 
+    //shuffle elements
     function shuffleElements() {
         for (let i = area.children.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -94,6 +99,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const placeholdersArray = Array.from(areaT.querySelectorAll('.quadrado'));
 
+
+    //map elements position on the table
     const placeholdersMapping = [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
         11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -113,20 +120,21 @@ document.addEventListener('DOMContentLoaded', function () {
         placeholder.dataset.number = placeholdersMapping[index];
     });
 
+    //placeholders declaration
     const placeholders = Array.from(area.querySelectorAll('.quadrado'), () => {
         div.classList.add('element', 'placeholder');
         div.setAttribute('draggable', 'false');
 
     });
-
-
     placeholders.forEach(placeholder => area.appendChild(placeholder));
 
+    //define draggable elements
     elementsArray.forEach(element => {
         element.addEventListener('dragstart', dragStart);
         element.addEventListener('dragend', dragEnd);
     });
 
+    //define droppable placeholders
     placeholdersArray.forEach(placeholder => {
         placeholder.addEventListener('dragover', dragOver);
         placeholder.addEventListener('dragenter', dragEnter);
@@ -134,32 +142,28 @@ document.addEventListener('DOMContentLoaded', function () {
         placeholder.addEventListener('drop', dragDrop);
     });
 
+    //drag functions
     let draggedElement = null;
-
     function dragStart() {
         draggedElement = this;
         this.classList.add('dragging');
     }
-
     function dragEnd() {
         draggedElement.classList.remove('dragging');
         draggedElement = null;
     }
-
     function dragOver(e) {
         e.preventDefault();
     }
-
     function dragEnter(e) {
         e.preventDefault();
         this.classList.add('hovered');
     }
-
     function dragLeave() {
         this.classList.remove('hovered');
-
     }
 
+    //dropping verify if is empty and then verify if is correct
     function dragDrop() {
         this.classList.remove('hovered');
         if (this.children.length === 0) {
@@ -174,6 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+    // verify if class alter and count, then verify endgame
     var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             if (mutation.addedNodes.length > 0) {
@@ -185,9 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-    // Configurações do observador - observar adições de nós ao DOM
+    // Observer Configuration - watch additions to the DOM
     var config = { childList: true, subtree: true };
-    // Iniciar a observação
+    // Start observation
     observer.observe(document.body, config);
 
 
