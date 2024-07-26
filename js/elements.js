@@ -184,9 +184,11 @@ document.addEventListener('DOMContentLoaded', function () {
         mutations.forEach(function(mutation) {
             if (mutation.addedNodes.length > 0) {
                 var qtdCorrect = document.getElementsByClassName('correct');
-                var quantidade = qtdCorrect.length;
-                if (quantidade === 118) {
-                    console.log("GG");
+                var quantidade = qtdCorrect.length;                
+                if (quantidade === 2) {
+                    const box = document.querySelector('.endgame');
+                    box.style.display="flex";
+                    console.log(box);
                 }
             }
         });
