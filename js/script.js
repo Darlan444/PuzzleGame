@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var qtdCorrect = document.getElementsByClassName('correct');
                 var quantidade = qtdCorrect.length;  
                 var audio = new Audio('audio/sound.mp3')              
-                if (quantidade === 1) {
+                if (quantidade === 118) {
                     const box = document.querySelector('.endgame');
                     box.style.display="flex";
                     audio.addEventListener('canplaythrough', function() {
