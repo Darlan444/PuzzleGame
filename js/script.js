@@ -185,11 +185,15 @@ document.addEventListener('DOMContentLoaded', function () {
         mutations.forEach(function(mutation) {
             if (mutation.addedNodes.length > 0) {
                 var qtdCorrect = document.getElementsByClassName('correct');
-                var quantidade = qtdCorrect.length;                
-                if (quantidade === 118) {
+                var quantidade = qtdCorrect.length;  
+                var audio = new Audio('audio/sound.mp3')              
+                if (quantidade === 1) {
                     const box = document.querySelector('.endgame');
                     box.style.display="flex";
-                    console.log(box);
+                    audio.addEventListener('canplaythrough', function() {
+                        audio.play();
+                        audio.volume = 0.1;
+                    });
                 }
             }
         });
