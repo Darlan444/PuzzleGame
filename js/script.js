@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function dragOver(e) {
         e.preventDefault();
+        this.classList.remove('incorrect');
     }
     function dragEnter(e) {
         e.preventDefault();
