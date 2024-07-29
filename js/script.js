@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     box.style.display="flex";
                     audio.addEventListener('canplaythrough', function() {
                         audio.play();
-                        audio.volume = 0.1;
+                        audio.volume = 0.02;
                     });
                 }
             }
