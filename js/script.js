@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function dragOver(e) {
         e.preventDefault();
-        this.classList.remove('incorrect');
     }
     function dragEnter(e) {
         e.preventDefault();
@@ -162,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function dragLeave() {
         this.classList.remove('hovered');
+        this.classList.remove('incorrect');
     }
 
     //dropping verify if is empty and then verify if is correct
