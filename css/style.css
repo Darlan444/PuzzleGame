@@ -231,7 +231,7 @@ a {
 }
 
 /* Warning for non supported devices - <1600px */
-@media (max-width: 1599px) {
+@media (max-width: 1023px) {
 
     /* AREA BLOCK */
     .not {
@@ -257,9 +257,7 @@ a {
     }
 }
 
-@media (min-width: 1024px) {
-
-    /* AREA BLOCK */
+@media (min-width: 1024px) and (max-width: 1599){
     * {
         overflow: hidden;
         margin: 0;
