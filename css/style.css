@@ -300,7 +300,8 @@ a {
     }
     .area-elements {
         width: 25%;
-        height: 95%;
+        height: auto;
+        max-height: 95%;
         margin-top: 1rem;
         margin-bottom: 1rem;
         position: relative;
@@ -313,6 +314,11 @@ a {
         width: 2rem;
         height: 2rem;
         border: #000000 solid 1px;
+        cursor: pointer;
 
+    }
+    .title{
+        right: 20%;
+        text-align: center;
     }
 }
