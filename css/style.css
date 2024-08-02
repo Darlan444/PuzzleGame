@@ -257,7 +257,7 @@ a {
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1599px){
+@media screen and (min-width: 1024px) and (max-width: 1440px){
     * {
         overflow: hidden;
         margin: 0;
@@ -291,6 +291,217 @@ a {
         width: 85.5%;
         height: auto;
         gap: 1px;
+    }
+    .quadrado {
+        min-width: 2rem;
+        min-height: 2rem;
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+    .area-elements {
+        width: 25%;
+        height: auto;
+        max-height: 95%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 2rem 2rem 2rem 2rem 2rem 2rem;
+        gap: 0.5rem 0.3rem;
+        overflow-y: visible;
+    }
+    .element {
+        width: 2rem;
+        height: 2rem;
+        border: #000000 solid 1px;
+        cursor: pointer;
+
+    }
+    .title{
+        right: 20%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 1599px){
+    * {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .not {
+        display: none;
+    }
+
+    .posAside {
+        width: 100dvw;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .container {
+        width: 70%;
+        height: 80%;
+        margin: 0;
+        position: relative;
+    }
+    .areatabela {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85.5%;
+        height: auto;
+        gap: 1px;
+    }
+    .l1{
+        justify-content: center;
+        gap: calc(70% - 3.7rem);
+    }
+    .l2,.l3{
+        justify-content: center;
+        gap: calc(70% - 16.5rem);
+    }
+    .quadrado {
+        min-width: 2rem;
+        min-height: 2rem;
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+    .area-elements {
+        width: 25%;
+        height: auto;
+        max-height: 95%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 2rem 2rem 2rem 2rem 2rem 2rem;
+        gap: 0.5rem 0.3rem;
+        overflow-y: visible;
+    }
+    .element {
+        width: 2rem;
+        height: 2rem;
+        border: #000000 solid 1px;
+        cursor: pointer;
+
+    }
+    .title{
+        right: 20%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1367px){
+    * {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .not {
+        display: none;
+    }
+
+    .posAside {
+        width: 100dvw;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .container {
+        width: 70%;
+        height: 80%;
+        margin: 0;
+        position: relative;
+    }
+    .areatabela {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85.5%;
+        height: auto;
+        gap: 1px;
+    }
+    .quadrado {
+        min-width: 2rem;
+        min-height: 2rem;
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+    .area-elements {
+        width: 25%;
+        height: auto;
+        max-height: 95%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 2rem 2rem 2rem 2rem 2rem 2rem;
+        gap: 0.5rem 0.3rem;
+        overflow-y: visible;
+    }
+    .element {
+        width: 2rem;
+        height: 2rem;
+        border: #000000 solid 1px;
+        cursor: pointer;
+
+    }
+    .title{
+        right: 20%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1366px) and (max-width: 1439px){
+    * {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .not {
+        display: none;
+    }
+
+    .posAside {
+        width: 100dvw;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .container {
+        width: 70%;
+        height: 80%;
+        margin: 0;
+        position: relative;
+    }
+    .areatabela {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85.5%;
+        height: auto;
+        gap: 1px;
+    }
+    .l1{
+        justify-content: center;
+        gap: calc(70% - 2rem);
+    }
+    .l2,.l3{
+        justify-content: center;
+        gap: calc(70% - 14.7rem);
     }
     .quadrado {
         min-width: 2rem;
