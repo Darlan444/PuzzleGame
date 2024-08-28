@@ -103,7 +103,7 @@
     justify-content: center;
     position: relative;
     border: #000000 solid 1px;
-    cursor: pointer;
+    cursor: move;
     width: 2.8rem;
     height: 2.8rem;
     z-index: 999;
